@@ -3,8 +3,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-PRODUCT_AAPT_CONFIG := normal large xlarge hdpi
-PRODUCT_AAPT_PREF_CONFIG := xlarge hdpi
+PRODUCT_AAPT_CONFIG := normal large xlarge mdpi hdpi
 
 DEVICE_PACKAGE_OVERLAYS += device/acer/t30-common/overlay
 
