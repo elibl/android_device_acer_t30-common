@@ -98,3 +98,16 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_RELEASETOOLS_EXTENSIONS := device/acer/t30-common
 BOARD_CUSTOM_BOOTIMG_MK := device/acer/t30-common/custombootimg.mk
 TARGET_NO_SEPARATE_RECOVERY := true
+
+# TWRP config
+RECOVERY_SDCARD_ON_DATA := true
+TW_FLASH_FROM_STORAGE := true
+TW_INCLUDE_FB2PNG := true
+HAVE_SELINUX := true
+TW_BRIGHTNESS_PATH := "/sys/class/backlight/pwm-backlight/brightness"
+TW_MAX_BRIGHTNESS := 255
+
+TW_INTERNAL_STORAGE_PATH := "/data/media"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"

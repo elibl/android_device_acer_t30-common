@@ -40,6 +40,7 @@ PRODUCT_COPY_FILES += \
     device/acer/t30-common/prebuilt/ramdisk/fstab.acer:root/fstab.acer \
     device/acer/t30-common/prebuilt/ramdisk/fstab.acer:root/fstab.$(PRODUCT_BOOTLOADER) \
     device/acer/t30-common/prebuilt/ramdisk/ueventd.target.rc:root/ueventd.$(PRODUCT_BOOTLOADER).rc \
+    device/acer/t30-common/prebuilt/ramdisk/twrp.fstab:recovery/root/etc/twrp.fstab
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/tablet_core_hardware.xml:system/etc/permissions/tablet_core_hardware.xml \
