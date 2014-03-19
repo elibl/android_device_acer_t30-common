@@ -22,8 +22,6 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 629145600
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 29905387520
 BOARD_FLASH_BLOCK_SIZE := 4096
 
-TARGET_RECOVERY_FSTAB := device/acer/t30-common/prebuilt/ramdisk/fstab.acer
-
 # Wifi related defines
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
 WPA_SUPPLICANT_VERSION      := VER_0_8_X
@@ -66,10 +64,6 @@ TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 # Sensors
 COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
 
-BOARD_HAS_NO_SELECT_BUTTON := true
-# Use this flag if the board has a ext4 partition larger than 2gb
-BOARD_HAS_LARGE_FILESYSTEM := true
-
 # Samsung EMMC brick bug
 # Already disabled in kernel, but disable again for safety
 BOARD_SUPPRESS_EMMC_WIPE := true
@@ -80,8 +74,7 @@ BOARD_HAL_STATIC_LIBRARIES := libhealthd.t30
 # CMHW
 BOARD_HARDWARE_CLASS := device/acer/t30-common/cmhw/
 
-TARGET_RELEASETOOLS_EXTENSIONS := device/acer/t30-common
-
+# Selinux
 BOARD_SEPOLICY_DIRS += \
 	device/acer/t30-common/sepolicy
 
@@ -96,3 +89,12 @@ BOARD_SEPOLICY_UNION += \
 	surfaceflinger.te \
 	system.te \
 	zygote.te
+
+# Recovery
+TARGET_RECOVERY_FSTAB := device/acer/t30-common/prebuilt/ramdisk/fstab.acer
+BOARD_HAS_NO_SELECT_BUTTON := true
+# Use this flag if the board has a ext4 partition larger than 2gb
+BOARD_HAS_LARGE_FILESYSTEM := true
+TARGET_RELEASETOOLS_EXTENSIONS := device/acer/t30-common
+BOARD_CUSTOM_BOOTIMG_MK := device/acer/t30-common/custombootimg.mk
+TARGET_NO_SEPARATE_RECOVERY := true
