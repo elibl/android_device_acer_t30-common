@@ -352,7 +352,7 @@ on property:sys.cpu.mode=1
 on property:sys.cpu.mode=2
     write /sys/dev-power_mode/power_mode 1
 
-# Disable 3G on A700
+# Disable 3G on A700/A510
 on property:ro.boot.carrier=wifi-only
     setprop ro.radio.noril yes
     setprop telephony.sms.receive false

@@ -156,7 +156,7 @@
     <!-- This device is not "voice capable"; it's data-only. -->
     <bool name="config_voice_capable">false</bool>
 
-    <!-- SMS is available on A701, will be disabled by sysprop for A700 -->
+    <!-- SMS is available on A701/A511, will be disabled by sysprop for A700/A510 -->
     <bool name="config_sms_capable">true</bool>
 
     <!-- Enable puk unlockscreen -->
