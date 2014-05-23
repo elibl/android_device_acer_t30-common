@@ -38,7 +38,7 @@ on post-fs-data
     mkdir /data/nvcam 0700 media camera
     chown dhcp dhcp /data/misc/dhcp
 
-    mkdir /data/gps 700 gps system
+    mkdir /data/gps 770 gps system
     chown gps system /data/gps
 
     # we will remap this as /mnt/sdcard with the sdcard fuse tool
